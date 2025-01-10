@@ -236,5 +236,5 @@ async function manageMailAndRegister() {
         rl.close();
     }
 }
-
+//run
 manageMailAndRegister();
