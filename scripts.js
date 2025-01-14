@@ -97,4 +97,11 @@ async function withdraw(to_address, asset_address, usdtAmount, headers, proxy) {
 
     return result || null;
 }
-export { coday, estimate, claim, start, info, infoSpin, doSpin, init, withdraw, getTokensInfo };
+
+async function getNodeId(headers, proxy) {
+    const url = 'https://api.meshchain.ai/meshmain/nodes';
+    const result = await coday(url, 'GET', headers, null, proxy);
+
+    return result || null;
+}
+export { coday, estimate, claim, start, info, infoSpin, doSpin, init, withdraw, getTokensInfo, getNodeId };
