@@ -16,7 +16,7 @@ MeshChain 是一个去中心化网络，旨在为AI工作负载提供经济实�
 - `git pull`后需要重新安装依赖：`npm install`
 - 添加了代理支持（可选）：将代理放入`proxy.txt`
 - 新增自动旋转功能
-- 使用anti-captcha解决验证码 [https://anti-captcha.com/](https://anti-captcha.com/)
+- 使用anti-captcha解决验证码 [https://anti-captcha.com/](https://getcaptchasolution.com/lprsposyjx)
 
 本仓库包含用于自动化任务的脚本，如用户注册、邮箱验证、领取奖励和开始挖矿等。
 
