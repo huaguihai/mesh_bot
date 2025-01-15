@@ -2,7 +2,7 @@
 
 MeshChain 是一个去中心化网络，旨在为AI工作负载提供经济实惠、可扩展的计算能力。我们解决了AI资源成本高和访问受限的问题，使每个人都能更容易地贡献并从AI的力量中受益。
 
-- [https://app.meshchain.ai/](https://app.meshchain.ai?ref=IOVO3G77Q0QQ)
+- [https://app.meshchain.ai/](https://app.meshchain.ai?ref=6JS8N98COFMW)
 
 ![mesh](image.png)
 
@@ -42,7 +42,7 @@ MeshChain 是一个去中心化网络，旨在为AI工作负载提供经济实�
 - 使用脚本注册时会自动生成这些文件
 - 如果已有账户可以手动创建文件
 - `token.txt`：以`access_token|refresh_token`格式存储token，每行1个账户
-- 访问 [https://app.meshchain.ai/](https://app.meshchain.ai?ref=IOVO3G77Q0QQ) 并检查以获取 `access_token|refresh_token`
+- 访问 [https://app.meshchain.ai/](https://app.meshchain.ai?ref=6JS8N98COFMW) 并检查以获取 `access_token|refresh_token`
 - ![image](https://github.com/user-attachments/assets/9c1571ef-f80e-4b62-9b59-a21c793bf69d)
 
 - `unique_id.txt`：存储链接节点的唯一ID，每行1个账户
