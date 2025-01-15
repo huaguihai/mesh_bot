@@ -1,13 +1,18 @@
-import fs from 'fs/promises';
-import { logger } from './logger.js';
-import { getTokensInfo, withdraw } from './scripts.js';
-import readline from 'readline';
+import fs from 'fs/promises'; // 文件系统模块
+import { logger } from './logger.js'; // 日志模块
+import { getTokensInfo, withdraw } from './scripts.js'; // 脚本功能模块
+import readline from 'readline'; // 命令行交互模块
 
+// 创建命令行交互接口
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
+/**
+ * 读取token和代理信息
+ * @returns {Promise<Array>} - 返回账户信息数组
+ */
 async function readTokensAndIds() {
     try {
         const tokenData = await fs.readFile('token.txt', 'utf-8');
@@ -41,10 +46,18 @@ async function readTokensAndIds() {
     }
 }
 
+/**
+ * 命令行提问功能
+ * @param {string} query - 提问内容
+ * @returns {Promise<string>} - 返回用户输入
+ */
 function askQuestion(query) {
     return new Promise(resolve => rl.question(query, resolve));
 }
 
+/**
+ * 主函数：处理提现逻辑
+ */
 async function main() {
     const accounts = await readTokensAndIds();
 

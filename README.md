@@ -1,81 +1,80 @@
-# MESHCHAIN NETWOTK
+# MESHCHAIN 网络
 
-MeshChain is a decentralized network designed to provide affordable, scalable compute power for AI workloads. We address the high costs and limited access to AI resources, making it easier for everyone to contribute and benefit from the power of AI.
+MeshChain 是一个去中心化网络，旨在为AI工作负载提供经济实惠、可扩展的计算能力。我们解决了AI资源成本高和访问受限的问题，使每个人都能更容易地贡献并从AI的力量中受益。
 
 - [https://app.meshchain.ai/](https://app.meshchain.ai?ref=IOVO3G77Q0QQ)
 
 ![mesh](image.png)
 
-# MeshChain Automation Script
+# MeshChain 自动化脚本
 
-## New update
-- Auto check usdt balance and auto withdraw
-- Get new tokens for account in `accounts.txt` file, run: `node getToken`
-- New token is saved in `newTokens.txt` file
+## 最新更新
+- 自动检查USDT余额并自动提现
+- 为`accounts.txt`文件中的账户获取新token，运行：`node getToken`
+- 新token保存在`newTokens.txt`文件中
 
-- Need to reinstall dependencies after `git pull`: `npm install`
-- Added support proxy usage (optional): put your proxies in `proxy.txt`
-- Added Feature Auto Spins
-- Solve captcha using anti-captcha [https://anti-captcha.com/](https://anti-captcha.com/)
+- `git pull`后需要重新安装依赖：`npm install`
+- 添加了代理支持（可选）：将代理放入`proxy.txt`
+- 新增自动旋转功能
+- 使用anti-captcha解决验证码 [https://anti-captcha.com/](https://anti-captcha.com/)
 
-This repository contains scripts for automating tasks such as user registration, email verification, claiming rewards, and starting mining on MeshChain.
+本仓库包含用于自动化任务的脚本，如用户注册、邮箱验证、领取奖励和开始挖矿等。
 
 ![banner](image-1.png)
 
-## Features
+## 功能
 
-- Support Multy accounts.
-- Register new accounts.
-- Verify email using OTP.
-- Claim faucet BNB.
-- Initialize and link unique nodes.
+- 支持多账户
+- 注册新账户
+- 使用OTP验证邮箱
+- 领取BNB水龙头
+- 初始化和链接唯一节点
 
-## Requirements
+## 要求
 
 - Node.js 16+
-- Dependencies installed via `npm install`
-- new mail for each account (for email verification and claim faucet bnb)
-- 1 account only can link with 1 nodeId so if you want farm it create multiple accounts.
+- 通过`npm install`安装依赖
+- 每个账户需要新邮箱（用于邮箱验证和领取BNB水龙头）
+- 1个账户只能链接1个nodeId，所以如果要挖矿需要创建多个账户
 
-## Files
+## 文件
 
-- this file while auto generate if you register using script
-- if you already have account you can create file manually
-- `token.txt`: Stores tokens in the format `access_token|refresh_token` each line 1 account.
-- got to [https://app.meshchain.ai/](https://app.meshchain.ai?ref=IOVO3G77Q0QQ) and inspect to get  `access_token|refresh_token`
+- 使用脚本注册时会自动生成这些文件
+- 如果已有账户可以手动创建文件
+- `token.txt`：以`access_token|refresh_token`格式存储token，每行1个账户
+- 访问 [https://app.meshchain.ai/](https://app.meshchain.ai?ref=IOVO3G77Q0QQ) 并检查以获取 `access_token|refresh_token`
 - ![image](https://github.com/user-attachments/assets/9c1571ef-f80e-4b62-9b59-a21c793bf69d)
 
-- `unique_id.txt`: Stores unique IDs for linked nodes each line 1 account.
-- inspect mesh extension to get id
+- `unique_id.txt`：存储链接节点的唯一ID，每行1个账户
+- 检查mesh扩展以获取id
 - ![image](https://github.com/user-attachments/assets/f715a727-8a1b-430c-b976-2b4f2d2c2bbd)
 
+## 使用说明
 
-## Usage
-
-1. Clone the repository:
+1. 克隆仓库：
    ```bash
-   git clone https://github.com/Zlkcyber/mesh-bot.git
-   cd mesh-bot
+   git clone https://github.com/huaguihai/mesh_bot.git
+   cd mesh_bot
    ```
-2. install dependencies:
+2. 安装依赖：
    ```bash
    npm install
    ```
-3. Register account:
+3. 注册账户：
    ```bash
    npm run register
    ```
-4. Run the bot:
+4. 运行机器人：
    ```bash
    npm run start
    ```
 
-## Additional Features:
-- **Auto check and withdraw usdt**
+## 附加功能：
+- **自动检查并提现USDT**
    ```bash
    npm run withdraw
    ```
-- **Auto Register And Verify Using Temp Mail**
+- **使用临时邮箱自动注册和验证**
 
   ```bash
   npm run autoreg

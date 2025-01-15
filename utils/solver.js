@@ -5,9 +5,9 @@ const pageurl = "https://app.meshchain.ai/signup";
 const sitekey = "0x4AAAAAAA0e4lkIb7ZRG1LE"; 
 
 /**
- * Solve CAPTCHA using 2Captcha API
- * @param {string} key - 2Captcha API key
- * @returns {Promise<string>} - Solved CAPTCHA token
+ * 使用2Captcha API解决验证码
+ * @param {string} key - 2Captcha API密钥
+ * @returns {Promise<string>} - 返回已解决的验证码token
  */
 export async function solve2Captcha(key) {
     const solver = new Solver(key);
@@ -21,9 +21,9 @@ export async function solve2Captcha(key) {
 }
 
 /**
- * Solve CAPTCHA using Anti-Captcha API
- * @param {string} key - Anti-Captcha API key
- * @returns {Promise<string>} - Solved CAPTCHA token
+ * 使用Anti-Captcha API解决验证码
+ * @param {string} key - Anti-Captcha API密钥
+ * @returns {Promise<string>} - 返回已解决的验证码token
  */
 export async function solveAntiCaptcha(key) {
     anticaptcha.setAPIKey(key);

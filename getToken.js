@@ -1,17 +1,18 @@
-import fs from 'fs/promises';
-import readline from 'readline/promises';
-import { logger } from './logger.js';
-import { solveAntiCaptcha } from './utils/solver.js';
-import { coday } from './scripts.js';
+import fs from 'fs/promises'; // 文件系统模块
+import readline from 'readline/promises'; // 命令行输入模块
+import { logger } from './logger.js'; // 日志模块
+import { solveAntiCaptcha } from './utils/solver.js'; // 验证码解决模块
+import { coday } from './scripts.js'; // HTTP请求模块
 
-const tokenPath = 'newTokens.txt';
-const accountsPath = 'accounts.txt';
+const tokenPath = 'newTokens.txt'; // 新token存储路径
+const accountsPath = 'accounts.txt'; // 账户信息存储路径
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
-});
+}); // 创建命令行交互接口
 
+// 读取账户信息
 async function readAccounts() {
     try {
         const accountsData = await fs.readFile(accountsPath, 'utf-8');
@@ -37,6 +38,7 @@ async function readAccounts() {
     }
 }
 
+// 用户登录功能
 async function login(email, password, apiKey) {
     try {
         const captchaToken = await solveAntiCaptcha(apiKey);
@@ -68,6 +70,7 @@ async function login(email, password, apiKey) {
     }
 }
 
+// 主函数：获取token
 const getTokens = async () => {
     try {
         const accounts = await readAccounts();
